@@ -14,8 +14,8 @@ def register():
     city=request.form.get("city")
     if not name or not city or not email:
         return render_template('status.html',status='fail')
-    file= open(r"F:\learn_python\flask\registration_site\registered.csv",'a',newline='')
-    file_read=open(r"F:\learn_python\flask\registration_site\registered.csv")
+    file= open(r"filename.csv",'a',newline='')
+    file_read=open(r"filename.csv")
     s=file_read.read()
     file_read.close()
     if email not in s:
@@ -28,7 +28,7 @@ def register():
 
 @app.route('/registered')
 def registered():
-    with open(r"f:\learn_python\flask\registration_site\registered.csv",'r') as file:
+    with open(r"filename.csv",'r') as file:
         reader= csv.reader(file)
         studentslist=list(reader)
     return render_template('registered.html',students=studentslist)
