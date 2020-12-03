@@ -1,0 +1,13 @@
+{%extends "layout.html"%}
+{% block body%}
+    {%if status=='fail'%}
+        {%if repeated==1%}
+        <h1>Email already registered</h1>
+        {%else%}
+        <h1>Failure!You must provide name, email and city</h1>
+        {%endif%}
+    {%elif status=='success'%}
+        <h1>Registration complete</h1>
+    {%endif%}
+    <a href = '/'>GoBack</a>
+{%endblock%}

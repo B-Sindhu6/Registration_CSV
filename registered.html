@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{%block body%}
+<h1>List of all users registered</h1> 
+<a href='/'>Goto Home</a>
+<p><br></p>
+<table border="2">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>City</th>
+    </tr>
+
+    {%for student in students%}
+    <tr>  
+        {% for i in student %}
+        <td style='text-align: center;width: 80px'>{{ i }}</td>
+        {%endfor%}
+    </tr>
+    {%endfor%}
+
+</table>
+{%endblock%}

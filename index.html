@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+{%block body%}
+    <h1>Register Here</h1>
+    <h7><a href='/registered'>View all registrations</a></h7>
+    <p><br></p>
+    <form autocomplete= "false" action='/register' method='POST'>
+        <input type='text' selected name='name' placeholder="Enter name">
+        <input type='text' name='email' placeholder='user@example.com'>
+        <select name="city">
+            <option value = 'select' disabled selected>select</option>
+            <option value = 'Chennai'>Chennai</option>
+            <option value = 'Mumbai'>Mumbai</option>
+            <option value = 'Bangalore'>Bangalore</option>
+            <option value = 'Delhi'>Delhi</option>
+            <option value = 'Hyderabad'>Hyderabad</option>
+            <option value = 'Kolkata'>Kolkata</option>
+            <option value = 'Pune'>Pune</option>
+            <option value = 'Vizag'>Vizag</option>
+        </select>
+        <input type='submit' value = 'Go!'>
+    </form>
+{%endblock%}
